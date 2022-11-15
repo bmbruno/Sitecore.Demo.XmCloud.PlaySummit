@@ -6,6 +6,7 @@ import {
   ImageField,
   Field,
   LinkField,
+  Text
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
@@ -42,13 +43,13 @@ export const Default = (props: PromoProps): JSX.Element => {
           <div className="promo-text">
             {/* DEMO TEAM CUSTOMIZATION - Add fields */}
             <div className="field-promotext3">
-              <JssRichText className="promo-text" field={props.fields.PromoText3} />
+              <Text className="promo-text" field={props.fields.PromoText3} />
             </div>
             <div className="field-promotext">
-              <JssRichText className="promo-text" field={props.fields.PromoText} />
+              <Text className="promo-text" field={props.fields.PromoText} />
             </div>
             <div className="field-promotext2">
-              <JssRichText className="promo-text" field={props.fields.PromoText2} />
+              <Text className="promo-text" field={props.fields.PromoText2} />
             </div>
             {/* END CUSTOMIZATION */}
             <div className="field-promolink">
@@ -105,15 +106,15 @@ export const WithColumns = (props: PromoProps): JSX.Element => {
             <div className="text-cols">
               <div className="field-promotext">
                 <JssImage field={props.fields.PromoIcon2} />
-                <JssRichText className="rich-text" field={props.fields.PromoText} />
+                <Text className="rich-text" field={props.fields.PromoText} />
               </div>
               <div className="field-promotext2">
                 <JssImage field={props.fields.PromoIcon2} />
-                <JssRichText className="rich-text" field={props.fields.PromoText2} />
+                <Text className="rich-text" field={props.fields.PromoText2} />
               </div>
               <div className="field-promotext3">
                 <JssImage field={props.fields.PromoIcon2} />
-                <JssRichText className="rich-text" field={props.fields.PromoText3} />
+                <Text className="rich-text" field={props.fields.PromoText3} />
               </div>
             </div>
             <div className="field-promolink">
