@@ -5,7 +5,7 @@ import {
   RichText as JssRichText,
   ImageField,
   Field,
-  LinkField
+  LinkField,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
