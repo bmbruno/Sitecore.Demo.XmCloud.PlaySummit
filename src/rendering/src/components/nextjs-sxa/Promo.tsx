@@ -43,13 +43,13 @@ export const Default = (props: PromoProps): JSX.Element => {
           <div className="promo-text">
             {/* DEMO TEAM CUSTOMIZATION - Add fields */}
             <div className="field-promotext3">
-              <Text className="promo-text" field={props.fields.PromoText3} />
+              <JssRichText className="promo-text" field={props.fields.PromoText3} />
             </div>
             <div className="field-promotext">
-              <Text className="promo-text" field={props.fields.PromoText} />
+              <JssRichText className="promo-text" field={props.fields.PromoText} />
             </div>
             <div className="field-promotext2">
-              <Text className="promo-text" field={props.fields.PromoText2} />
+              <JssRichText className="promo-text" field={props.fields.PromoText2} />
             </div>
             {/* END CUSTOMIZATION */}
             <div className="field-promolink">
@@ -78,11 +78,11 @@ export const WithText = (props: PromoProps): JSX.Element => {
           <div className="promo-text">
             <div>
               <div className="field-promotext">
-                <Text className="promo-text" field={props.fields.PromoText} />
+                <JssRichText className="promo-text" field={props.fields.PromoText} />
               </div>
             </div>
             <div className="field-promotext">
-              <Text className="promo-text" field={props.fields.PromoText2} />
+              <JssRichText className="promo-text" field={props.fields.PromoText2} />
             </div>
           </div>
         </div>
