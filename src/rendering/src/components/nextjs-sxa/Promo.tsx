@@ -6,7 +6,7 @@ import {
   ImageField,
   Field,
   LinkField,
-  Text
+  Text,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
