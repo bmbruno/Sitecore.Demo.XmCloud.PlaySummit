@@ -107,15 +107,15 @@ export const WithColumns = (props: PromoProps): JSX.Element => {
             <div className="text-cols">
               <div className="field-promotext">
                 <JssImage field={props.fields.PromoIcon2} />
-                <JssRichText className="rich-text" field={props.fields.PromoText} />
+                <Text className="rich-text" field={props.fields.PromoText} />
               </div>
               <div className="field-promotext2">
                 <JssImage field={props.fields.PromoIcon2} />
-                <JssRichText className="rich-text" field={props.fields.PromoText2} />
+                <Text className="rich-text" field={props.fields.PromoText2} />
               </div>
               <div className="field-promotext3">
                 <JssImage field={props.fields.PromoIcon2} />
-                <JssRichText className="rich-text" field={props.fields.PromoText3} />
+                <Text className="rich-text" field={props.fields.PromoText3} />
               </div>
             </div>
             <div className="field-promolink">
