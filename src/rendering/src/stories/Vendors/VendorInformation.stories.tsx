@@ -2,8 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { SESSIONS } from '../mock-sessions';
 
-import {
-  Default as VendorInformation,
+import VendorInformation, {
   VendorInformationProps,
 } from '../../components/Vendors/VendorInformation';
 import { GraphQLSession } from '../../types/session';

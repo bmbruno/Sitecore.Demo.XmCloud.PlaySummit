@@ -62,10 +62,9 @@ const socialIcons = {
 
 const Footer = (props: FooterProps): JSX.Element => {
   const newDate = new Date();
-  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div className={`footer container ${sxaStyles}`}>
+    <div className="footer container">
       <div className="footer-banner">
         <Link href="/">
           <a>
@@ -113,4 +112,4 @@ const Footer = (props: FooterProps): JSX.Element => {
   );
 };
 
-export const Default = Footer;
+export default Footer;

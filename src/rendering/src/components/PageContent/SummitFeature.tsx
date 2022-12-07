@@ -18,21 +18,17 @@ export type SummitFeatureProps = ComponentProps & {
   };
 };
 
-const SummitFeature = (props: SummitFeatureProps): JSX.Element => {
-  const sxaStyles = `${props.params?.styles || ''}`;
+const SummitFeature = (props: SummitFeatureProps): JSX.Element => (
+  <div className="grid-item">
+    <Link field={props.fields.Link}>
+      <Image field={props.fields.Logo} alt={props.fields.Title.value} />
 
-  return (
-    <div className={`grid-item ${sxaStyles}`}>
-      <Link field={props.fields.Link}>
-        <Image field={props.fields.Logo} alt={props.fields.Title.value} />
+      <div className="item-details item-details-left">
+        <Text tag="div" className="item-title" field={props.fields.Title} />
+        <Text tag="p" className="item-description" field={props.fields.Description} />
+      </div>
+    </Link>
+  </div>
+);
 
-        <div className="item-details item-details-left">
-          <Text tag="div" className="item-title" field={props.fields.Title} />
-          <Text tag="p" className="item-description" field={props.fields.Description} />
-        </div>
-      </Link>
-    </div>
-  );
-};
-
-export const Default = withDatasourceCheck()<SummitFeatureProps>(SummitFeature);
+export default withDatasourceCheck()<SummitFeatureProps>(SummitFeature);

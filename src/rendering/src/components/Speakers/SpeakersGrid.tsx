@@ -26,8 +26,6 @@ const SpeakersGrid = (props: SpeakersGridProps): JSX.Element => {
   const isPageEditing = sitecoreContext.pageState === LayoutServicePageState.Edit;
   const hasSpeakers = !!props.fields?.data?.item;
 
-  const sxaStyles = `${props.params?.styles || ''}`;
-
   !hasSpeakers && console.warn('Missing Datasource Item');
 
   const pageEditingMissingDatasource = !hasSpeakers && isPageEditing && (
@@ -55,9 +53,7 @@ const SpeakersGrid = (props: SpeakersGridProps): JSX.Element => {
         </Link>
       ));
 
-  const speakersGrid = hasSpeakers && (
-    <div className={`speakers-grid container ${sxaStyles}`}>{speakers}</div>
-  );
+  const speakersGrid = hasSpeakers && <div className="speakers-grid container">{speakers}</div>;
 
   return (
     <>
@@ -67,4 +63,4 @@ const SpeakersGrid = (props: SpeakersGridProps): JSX.Element => {
   );
 };
 
-export const Default = SpeakersGrid;
+export default SpeakersGrid;

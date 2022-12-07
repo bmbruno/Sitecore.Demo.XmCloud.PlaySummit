@@ -1,8 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import {
-  Default as ThreeColumnsSection,
+import ThreeColumnsSection, {
   ThreeColumnsSectionProps,
 } from '../../components/PageContent/ThreeColumnsSection';
 

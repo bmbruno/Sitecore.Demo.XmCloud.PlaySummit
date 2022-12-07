@@ -23,8 +23,6 @@ const SponsorsGrid = (props: SponsorsGridProps): JSX.Element => {
   const isPageEditing = sitecoreContext.pageState === LayoutServicePageState.Edit;
   const hasSponsors = !!props.fields;
 
-  const sxaStyles = `${props.params?.styles || ''}`;
-
   !hasSponsors && console.warn('Missing Datasource Item');
 
   const pageEditingMissingDatasource = !hasSponsors && isPageEditing && (
@@ -52,7 +50,7 @@ const SponsorsGrid = (props: SponsorsGridProps): JSX.Element => {
   const downArrow = <img src={`${publicUrl}/assets/img/icons/down-arrow.svg`} alt="^" />;
 
   const sponsorsGrid = hasSponsors && (
-    <section className={`section ${sxaStyles}`}>
+    <section className="section">
       <div className="section-content container">
         <h1 className="section-content-title">Explore Sponsors</h1>
         <div className="item-grid">
@@ -118,4 +116,4 @@ const SponsorsGrid = (props: SponsorsGridProps): JSX.Element => {
   );
 };
 
-export const Default = withDatasourceCheck()<SponsorsGridProps>(SponsorsGrid);
+export default withDatasourceCheck()<SponsorsGridProps>(SponsorsGrid);

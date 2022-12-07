@@ -28,11 +28,10 @@ const InformationPageHero = (props: InformationPageHeroProps): JSX.Element => {
   ) : undefined;
 
   const lowerCaseQualificative = props.qualificative.toLowerCase();
-  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <section
-      className={`information-page-hero ${props.type}-information-page-hero ${lowerCaseQualificative} ${sxaStyles}`}
+      className={`information-page-hero ${props.type}-information-page-hero ${lowerCaseQualificative}`}
     >
       <div className="content">
         <div className="image-container">

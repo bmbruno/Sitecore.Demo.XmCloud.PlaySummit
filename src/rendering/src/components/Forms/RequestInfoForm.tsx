@@ -2,16 +2,13 @@ import { FormEvent, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { identifyVisitor } from '../../services/CdpService';
 import { getUserData } from '../../helpers/GuestDataHelper';
-import { ComponentProps } from 'lib/component-props';
 
-const RequestInfoForm = (props: ComponentProps): JSX.Element => {
+const RequestInfoForm = (): JSX.Element => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-
-  const sxaStyles = `${props.params?.styles || ''}`;
 
   useEffect(() => {
     const setUserData = async () => {
@@ -142,10 +139,10 @@ const RequestInfoForm = (props: ComponentProps): JSX.Element => {
   const formContent = isFormSubmitted ? thankYouMessage : form;
 
   return (
-    <form className={`form request-info-form ${sxaStyles}`} onSubmit={handleFormSubmit}>
+    <form className="form request-info-form" onSubmit={handleFormSubmit}>
       {formContent}
     </form>
   );
 };
 
-export const Default = RequestInfoForm;
+export default RequestInfoForm;

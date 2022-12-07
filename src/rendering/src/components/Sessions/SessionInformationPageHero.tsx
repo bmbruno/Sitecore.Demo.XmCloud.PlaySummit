@@ -26,9 +26,7 @@ const SessionInformationPageHero = (props: SessionInformationPageHeroProps): JSX
   const premiumSessionQualificative = props?.fields?.Premium?.value ? 'premium' : '';
 
   return (
-    <section
-      className={`information-page-hero session-information-page-hero ${premiumSessionQualificative}`}
-    >
+    <section className={`session-information-page-hero ${premiumSessionQualificative}`}>
       <div
         className="background-container"
         style={{

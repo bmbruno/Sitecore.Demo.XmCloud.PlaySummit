@@ -2,7 +2,7 @@ import { PropsWithChildren, useEffect } from 'react';
 import Head from 'next/head';
 import { UserProvider } from '@auth0/nextjs-auth0';
 import ShopNavigation from '../Navigation/ShopNavigation';
-import { Default as Footer, FooterProps } from '../Navigation/Footer';
+import Footer, { FooterProps } from '../Navigation/Footer';
 import HeaderCdpMessageBar from '../HeaderCdpMessageBar';
 import { isCommerceEnabled } from '../../helpers/CommerceHelper';
 import { Provider } from 'react-redux';
@@ -11,9 +11,7 @@ import OcProvider from '../../redux/ocProvider';
 import { DiscoverService } from '../../services/DiscoverService';
 import { logViewEvent } from '../../services/CdpService';
 
-if (isCommerceEnabled) {
-  DiscoverService();
-}
+DiscoverService();
 
 export const ShopLayout = (props: PropsWithChildren<unknown>): JSX.Element => {
   useEffect(() => {

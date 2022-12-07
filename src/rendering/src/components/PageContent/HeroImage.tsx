@@ -8,12 +8,10 @@ export type HeroImageProps = ComponentProps & {
 };
 
 const HeroImage = (props: HeroImageProps): JSX.Element => {
-  const sxaStyles = `${props.params?.styles || ''}`;
-
   if (props.fields?.hero?.value?.src) {
     return (
       <section
-        className={`hero-image ${sxaStyles}`}
+        className="hero-image"
         style={{ backgroundImage: `url("${props.fields.hero.value.src}")` }}
       />
     );
@@ -22,4 +20,4 @@ const HeroImage = (props: HeroImageProps): JSX.Element => {
   return <div>Hero image is missing from the datasource</div>;
 };
 
-export const Default = withDatasourceCheck()<HeroImageProps>(HeroImage);
+export default withDatasourceCheck()<HeroImageProps>(HeroImage);

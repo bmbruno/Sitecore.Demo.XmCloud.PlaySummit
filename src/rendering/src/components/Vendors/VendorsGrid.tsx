@@ -116,4 +116,4 @@ const VendorsGrid = (props: VendorsGridProps): JSX.Element => {
   );
 };
 
-export const Default = withDatasourceCheck()<VendorsGridProps>(VendorsGrid);
+export default withDatasourceCheck()<VendorsGridProps>(VendorsGrid);

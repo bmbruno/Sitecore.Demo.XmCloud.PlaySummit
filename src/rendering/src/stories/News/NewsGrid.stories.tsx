@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Default as NewsGrid } from '../../components/News/NewsGrid';
+import NewsGrid from '../../components/News/NewsGrid';
 import { News } from 'src/types/news';
 
 export default {

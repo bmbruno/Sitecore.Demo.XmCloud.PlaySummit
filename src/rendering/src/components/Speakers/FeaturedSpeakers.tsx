@@ -41,8 +41,6 @@ const FeaturedSpeakers = (props: FeaturedSpeakersProps): JSX.Element => {
   const isPageEditing = sitecoreContext.pageState === LayoutServicePageState.Edit;
   const hasSpeakers = !!props.fields?.data?.item;
 
-  const sxaStyles = `${props.params?.styles || ''}`;
-
   !hasSpeakers && console.warn('Missing Datasource Item');
 
   const pageEditingMissingDatasource = !hasSpeakers && isPageEditing && (
@@ -78,7 +76,7 @@ const FeaturedSpeakers = (props: FeaturedSpeakersProps): JSX.Element => {
       ));
 
   const featuredSpeakers = hasSpeakers && (
-    <div className={`featured-speakers item-grid ${sxaStyles}`}>
+    <div className="featured-speakers item-grid">
       <div className="grid-content">{speakers}</div>
     </div>
   );
@@ -91,4 +89,4 @@ const FeaturedSpeakers = (props: FeaturedSpeakersProps): JSX.Element => {
   );
 };
 
-export const Default = FeaturedSpeakers;
+export default FeaturedSpeakers;

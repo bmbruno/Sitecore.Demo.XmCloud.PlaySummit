@@ -4,17 +4,18 @@ import {
   Link as JssLink,
   RichText as JssRichText,
   ImageField,
+  Field,
   LinkField,
-  RichTextField,
+  Text,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
   PromoIcon: ImageField;
   PromoIcon2: ImageField; // DEMO TEAM CUSTOMIZATION - Additional field
-  PromoText: RichTextField; // DEMO TEAM CUSTOMIZATION - Change to RichTextField
+  PromoText: Field<string>;
   PromoLink: LinkField;
-  PromoText2: RichTextField; // DEMO TEAM CUSTOMIZATION - Change to RichTextField
-  PromoText3: RichTextField; // DEMO TEAM CUSTOMIZATION - Additional field
+  PromoText2: Field<string>;
+  PromoText3: Field<string>; // DEMO TEAM CUSTOMIZATION - Additional field
 }
 
 type PromoProps = {
@@ -42,13 +43,13 @@ export const Default = (props: PromoProps): JSX.Element => {
           <div className="promo-text">
             {/* DEMO TEAM CUSTOMIZATION - Add fields */}
             <div className="field-promotext3">
-              <JssRichText field={props.fields.PromoText3} />
+              <Text className="promo-text" field={props.fields.PromoText3} />
             </div>
             <div className="field-promotext">
-              <JssRichText field={props.fields.PromoText} />
+              <Text className="promo-text" field={props.fields.PromoText} />
             </div>
             <div className="field-promotext2">
-              <JssRichText field={props.fields.PromoText2} />
+              <Text className="promo-text" field={props.fields.PromoText2} />
             </div>
             {/* END CUSTOMIZATION */}
             <div className="field-promolink">
@@ -75,16 +76,14 @@ export const WithText = (props: PromoProps): JSX.Element => {
             <JssImage field={props.fields.PromoIcon} />
           </div>
           <div className="promo-text">
-            {/* DEMO TEAM CUSTOMIZATION - Replace Text with JssRichText */}
             <div>
               <div className="field-promotext">
-                <JssRichText className="promo-text" field={props.fields.PromoText} />
+                <Text className="promo-text" field={props.fields.PromoText} />
               </div>
             </div>
             <div className="field-promotext">
-              <JssRichText className="promo-text" field={props.fields.PromoText2} />
+              <Text className="promo-text" field={props.fields.PromoText2} />
             </div>
-            {/* END CUSTOMIZATION */}
           </div>
         </div>
       </div>

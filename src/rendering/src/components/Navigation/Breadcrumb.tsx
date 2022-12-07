@@ -51,8 +51,6 @@ const Breadcrumb = (props: BreadcrumbProps): JSX.Element => {
   const propItemAncestors = props.fields.data.item.ancestors;
   const breadcrumbs = [];
 
-  const sxaStyles = `${props.params?.styles || ''}`;
-
   const pageItems = {
     title: getBreadcrumbTitle(propItem),
     url: getBreadcrumbUrl(propItem),
@@ -80,10 +78,10 @@ const Breadcrumb = (props: BreadcrumbProps): JSX.Element => {
   ));
 
   return (
-    <nav className={`breadcrumb ${sxaStyles}`} aria-label="breadcrumbs">
+    <nav className="breadcrumb" aria-label="breadcrumbs">
       <ol className="list">{breadcrumbListItems}</ol>
     </nav>
   );
 };
 
-export const Default = Breadcrumb;
+export default Breadcrumb;

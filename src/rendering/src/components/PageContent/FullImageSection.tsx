@@ -18,14 +18,14 @@ type FullImageSectionProps = ComponentProps & {
 };
 
 const FullImageSection = ({ fields, params }: FullImageSectionProps): JSX.Element => {
-  const sxaStyles = `${params?.styles || ''}`;
+  const sectionStyles = `${params?.styles || ''}`;
 
   const callToAction = fields.callToActionLink && (
     <Link field={fields.callToActionLink} className="btn-main" />
   );
 
   return (
-    <section className={`section full-image-section ${sxaStyles}`}>
+    <section className={`section full-image-section ${sectionStyles}`}>
       <div className="section-content full-image-section-content container">
         <div className="content-card">
           <Text tag="h5" field={fields.subtitle} />

@@ -23,8 +23,6 @@ const NewsList = (props: NewsListProps): JSX.Element => {
   const isPageEditing = sitecoreContext.pageState === LayoutServicePageState.Edit;
   const hasNews = !!props?.fields?.items?.length;
 
-  const sxaStyles = `${props.params?.styles || ''}`;
-
   !hasNews && console.warn('Missing Datasource Item');
 
   const pageEditingMissingDatasource = !hasNews && isPageEditing && <p>Missing Datasource Item</p>;
@@ -55,7 +53,7 @@ const NewsList = (props: NewsListProps): JSX.Element => {
     ));
 
   const newsList = hasNews && (
-    <section className={`section section-news-list ${sxaStyles}`}>
+    <section className="section section-news-list">
       <div className="container">
         <div className="content">{newsCards}</div>
       </div>
@@ -70,4 +68,4 @@ const NewsList = (props: NewsListProps): JSX.Element => {
   );
 };
 
-export const Default = NewsList;
+export default NewsList;

@@ -53,16 +53,16 @@
 
 @screen md {
   .full-image-section-offer {
-    background-image: url(../img/offer-background.webp);
+    background-image: url(../img/offer-background.jpg);
   }
 
   .full-image-section-speaker {
-    background-image: url(../img/speaker-chris-williams-hero.webp);
+    background-image: url(../img/speaker-chris-williams-hero.png);
   }
 }
 
 .full-image-section-map {
   @apply h-96;
 
-  background-image: url(../img/play-venue-map.webp);
+  background-image: url(../img/play-venue-map.jpg);
 }

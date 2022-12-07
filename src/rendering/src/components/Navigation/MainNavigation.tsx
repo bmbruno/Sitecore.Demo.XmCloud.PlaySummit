@@ -40,9 +40,6 @@ export type MainNavigationProps = ComponentProps & {
 
 const MainNavigation = (props: MainNavigationProps): JSX.Element => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-
-  const sxaStyles = `${props.params?.styles || ''}`;
-
   const shopLink = isCommerceEnabled && (
     <li className="text-menu-item">
       <Link href="/shop">
@@ -52,9 +49,9 @@ const MainNavigation = (props: MainNavigationProps): JSX.Element => {
   );
 
   return (
-    <nav className={`main-navigation ${sxaStyles}`}>
+    <nav className="main-navigation">
       <div className="navigation-content">
-        <div className="controls-container container">
+        <div className="controls-container">
           <Link href="/">
             <a className="logo-link">
               <Image
@@ -79,7 +76,7 @@ const MainNavigation = (props: MainNavigationProps): JSX.Element => {
           </button>
         </div>
         <div className={'items-container' + (navbarOpen ? ' opened' : ' closed')}>
-          <ul className="container">
+          <ul>
             {props.fields?.data?.links?.children?.results?.map((item, index) => (
               <li className="text-menu-item" key={index}>
                 <Link href={item.field?.jsonValue?.value?.href ?? '#'} prefetch={false}>
@@ -100,4 +97,4 @@ const MainNavigation = (props: MainNavigationProps): JSX.Element => {
   );
 };
 
-export const Default = MainNavigation;
+export default MainNavigation;

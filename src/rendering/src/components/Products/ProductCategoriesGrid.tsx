@@ -12,8 +12,6 @@ type ProductCategoriesProps = ComponentProps & {
 };
 
 const ProductCategoriesGrid = (props: ProductCategoriesProps): JSX.Element => {
-  const sxaStyles = `${props.params?.styles || ''}`;
-
   const categories =
     props.fields.Categories &&
     Array.isArray(props.fields.Categories) &&
@@ -38,7 +36,7 @@ const ProductCategoriesGrid = (props: ProductCategoriesProps): JSX.Element => {
       </div>
     ));
 
-  return <div className={`product-categories-grid ${sxaStyles}`}>{categories}</div>;
+  return <div className="product-categories-grid">{categories}</div>;
 };
 
-export const Default = withDatasourceCheck()<ProductCategoriesProps>(ProductCategoriesGrid);
+export default withDatasourceCheck()<ProductCategoriesProps>(ProductCategoriesGrid);

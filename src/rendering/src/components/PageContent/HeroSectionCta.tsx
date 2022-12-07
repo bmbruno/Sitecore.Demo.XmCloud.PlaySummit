@@ -7,14 +7,12 @@ export type HeroSectionCtaProps = ComponentProps & {
   };
 };
 
-const HeroSectionCta = ({ fields, params }: HeroSectionCtaProps): JSX.Element => {
-  const sxaStyles = `${params?.styles || ''}`;
-
+const HeroSectionCta = ({ fields }: HeroSectionCtaProps): JSX.Element => {
   return (
-    <div className={`btn-area ${sxaStyles}`}>
+    <div className="btn-area">
       <Link field={fields.Link} className="btn-main" />
     </div>
   );
 };
 
-export const Default = withDatasourceCheck()<HeroSectionCtaProps>(HeroSectionCta);
+export default withDatasourceCheck()<HeroSectionCtaProps>(HeroSectionCta);
